@@ -10,15 +10,8 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class HttpURLConnectionTaux {
 
-    //private final String USER_AGENT = "Mozilla/5.0";
 
-    public static void main(String[] args) throws Exception {
-
-        HttpURLConnectionTaux http = new HttpURLConnectionTaux();
-
-        System.out.println("Testing 1 - Send Http GET request");
-        http.sendGet("USD","EUR", "2018-06-24");
-
+    public HttpURLConnectionTaux() {
     }
 
     // HTTP GET request
@@ -33,7 +26,7 @@ public class HttpURLConnectionTaux {
         con.setRequestMethod("GET");
 
         //add request header
-        //con.setRequestProperty("User-Agent", USER_AGENT);
+        //con.setRequestProperty("User-Agent", "MOZILLA/5");
 
         int responseCode = con.getResponseCode();
         System.out.println("\nSending 'GET' request to URL : " + url);
